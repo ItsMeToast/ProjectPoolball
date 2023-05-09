@@ -1,5 +1,5 @@
 <!-- Poolball GMs Project -->
-<!-- GUEST USER WELCOME PAGE -->
+<!-- WELCOME/LOGIN PAGE -->
 
 
 <!DOCTYPE html>
@@ -40,11 +40,11 @@
     <!-- Footer -->
     <footer>
         <ul>
-            <li><a href="https://discord.com/channels/872517520341467146/872518021057495140">
+            <li><a href="https://discord.com/channels/872517520341467146/872518021057495140" target=”_blank”>
                 <img src="images/Discord-Logo-White.png" class="media">
             </a></li>
 
-            <li><a href="https://github.com/ItsMeToast/PoolballGMsPublic">
+            <li><a href="https://github.com/ItsMeToast/ProjectPoolball" target=”_blank”>
                 <img src="images/GitHub-Logo-White.png" class="media">
             </a></li>
           </ul>
