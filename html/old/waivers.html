@@ -1,0 +1,142 @@
+<!-- Poolball GMs Managerhub -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="manager.css">
+    <link rel="stylesheet" href="managerhub.css">
+
+    <title>Poolball GMs</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
+</head>
+
+<!-- HTML site body -->
+
+    <body>
+
+    <!-- Navbar -->
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+        
+        <nav>
+          <ul>
+            <div class="dropdown">
+                <li>
+                    <button class="dropbtn">NEWS</button>
+                    <div class="dropcontent">
+                        <a href="announcements.html">Announcements</a>
+                        <a href="scores.html">Scores</a>
+                        <a href="standings.html">Standings</a>
+                        <a href="transactions.html">Transactions</a>
+                    </div>
+                </li>
+            </div>
+
+            <a href="teams.html"><li>TEAMS</li></a>
+
+            <div class="dropdown">
+                <li>
+                    <button class="dropbtn">PLAYERS</button>
+                    <div class="dropcontent">
+                        <a href="allplayers.html">All Players</a>
+                        <a href="prospects.html">Prospects</a>
+                        <a href="halloffame.html">Hall of Fame</a>
+                    </div>
+                </li>
+            </div>
+
+            <a href="login.html" class="navlogin"><li>LOGIN</li></a>
+          </ul>
+        </nav>
+
+    </header>
+
+    <!-- Manager Sidebar -->
+    <div class="managerbar">
+        <table class="managertable" cellspacing="0">
+            <tr><td align="center"><a href="managerhub.html">My Team</a></td></tr>
+            <tr><td align="center"><a href="lines.html">Submit Lines</a></td></tr>
+            <tr><td align="center"><a href="trades.html">Trades</a></td></tr>
+            <tr><td align="center"><a href="contracts.html">Contracts</a></td></tr>
+            <tr><td align="center"><a href="drafting.html">Drafting</a></td></tr>
+            <tr><td align="center"><a href="freeagency.html">Free Agency</a></td></tr>
+            <tr><td align="center"><a href="waivers.html" id="active">Waivers</a></td></tr>
+            <tr><td align="center"><a href="#" id="logout">Log Out</a></td></tr>
+        </table>
+    </div>
+
+    <!-- Begin Page Content -->
+    <div class="content">
+        <table class="layout">
+            <tr> 
+                <td align="center"><h1>Welcome, USER</h1></td> 
+            </tr>
+
+            <tr><td align="center">
+                <table class="team" cellspacing="0" border>
+                    <tr class="tablehead" >
+                        <td align="center" colspan="9">Your Major Roster</td>
+                    </tr>
+
+                    <tr class="tablehead">
+                        <td align="center" colspan='2'>Player</td>
+                        <td align="center">Position</td>
+                        <td align="center">Age</td>
+                        <td align="center">GSSS</td>
+                        <td align="center">PMSS</td>
+                        <td align="center">DBSS</td>
+                        <td align="center">Injury</td>
+                        <td align="center">OSS</td>
+                    </tr>
+
+                    <!-- Obviously these are filled in the actual serverside code, these are just placeholders-->
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+
+                    <tr class='tablehead'>
+                        <td align='center' colspan='9'>Your Minor Roster</td>
+                      </tr>
+                      
+                      <tr class='tablehead'>
+                        <td align='center' colspan='2'>Player</td>
+                        <td align='center'>Position</td>
+                        <td align='center'>Age</td>
+                        <td align='center'>GSSS</td>
+                        <td align='center'>PMSS</td>
+                        <td align='center'>DBSS</td>
+                        <td align='center'>Injury</td>
+                        <td align='center'>OSS</td>
+                    </tr>
+
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                    <tr><td colspan="2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+                </table>
+            </td></tr>
+            
+        </table>
+
+    </div> <!-- end content div -->
+
+    </body>
+
+</html>

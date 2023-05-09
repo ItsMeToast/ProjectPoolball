@@ -1,0 +1,139 @@
+/* Homepage styles */
+
+body {
+    margin: 0;
+
+    background: linear-gradient(228deg, #ee6237, #e73c7e, #23a6d5, #7df57f);
+    background-size: 500% 500%;
+
+    -webkit-animation: gradientBackground 20s ease infinite;
+    -moz-animation: gradientBackground 20s ease infinite;
+    animation: gradientBackground 20s ease infinite;
+}
+
+.title {
+    font-size: 10vw;
+    font-family: racerItalic;
+    color: var(--bone);
+
+}
+
+.element {
+    width: 100%;
+    height: auto;
+    padding: 3vh 0;
+    display: block;
+    text-align: center;
+}
+
+.ball {
+    height: 30vh;
+    width: auto;
+
+    -webkit-animation: spin 10s ease-in-out infinite;
+    -moz-animation: spin 10s ease-in-out infinite;
+    animation: spin 10s ease-in-out infinite;
+}
+
+.button {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: basic;
+    color: var(--bone);
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 230% 100%;
+    background-position: 100%;
+
+    border: 0.4rem solid var(--bone);
+    border-radius: 30px;
+    transition: all 0.7s ease;
+    padding: 0.5rem 2rem 0.5rem 2rem;
+}
+
+.button:hover {
+    color: var(--sea);
+    font-size: 3.2rem;
+    cursor: pointer;
+    background-position: 10%;
+}
+
+.guest {
+    font-family: basic;
+    font-size: 2rem;
+    color: var(--bone);
+    margin-top: 12rem;
+    text-decoration: none;
+}
+
+.guest:hover {
+    text-decoration: underline;
+}
+
+footer {
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.media {
+    width: 8vh;
+    height: auto;
+
+}
+
+footer ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0rem 1rem;
+}
+
+
+
+/* --- Animations --- */
+
+/* Gradient Background Animation */
+@-webkit-keyframes gradientBackground {
+    0%{background-position:0% 56%}
+    50%{background-position:100% 45%}
+    100%{background-position:0% 56%}
+}
+@-moz-keyframes gradientBackground {
+    0%{background-position:0% 56%}
+    50%{background-position:100% 45%}
+    100%{background-position:0% 56%}
+}
+@keyframes gradientBackground {
+    0%{background-position:0% 56%}
+    50%{background-position:100% 45%}
+    100%{background-position:0% 56%}
+}
+
+/* Spin Animation */
+@-webkit-keyframes spin {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(720deg);}
+    100% {transform:rotate(0deg);}
+}
+@-moz-keyframes spin {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(720deg);}
+    100% {transform:rotate(0deg);}
+}
+@keyframes spin {
+    0% {transform:rotate(0deg);}
+    50% {transform:rotate(720deg);}
+    100% {transform:rotate(0deg);}
+}
+    
+ 

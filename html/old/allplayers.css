@@ -1,0 +1,71 @@
+/* All players page styles */
+
+body {
+    margin: 0;
+    padding-top: 6rem;
+    background: rgb(90, 86, 86);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.titlebox {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.searchbar {
+    padding: 0.5rem;
+    width: 15rem;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.submitbtn {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+.tablebox {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.playertable {
+    width: 75%;
+    border-collapse: collapse;
+    text-align: center;
+    color: white;
+}
+
+.playertable td {
+    border: 2px solid white;
+    padding: 1rem;
+}
+
+.tablehead {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.playerentry {
+    font-size: 1.2rem;
+}
+
+.playertable a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* --- Animations --- */

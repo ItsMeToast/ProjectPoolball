@@ -1,0 +1,62 @@
+/* Games page styles */
+
+body {
+    margin: 0;
+    padding: 6rem 0;
+    background-color: rgb(90, 86, 86);
+    font-family: funFont;
+    color: rgb(255, 255, 255);
+}
+
+.seasonbutton {
+    width: 85%;
+    font-family: funFont;
+    color: rgb(255, 255, 255);
+    background-color: rgb(54, 51, 51);
+    font-size: 3rem;
+    cursor: pointer;
+    border: none;
+    margin-top: 5vw;
+    padding: 1rem 0;
+}
+
+.seasonbutton:hover {
+    background-color: rgb(41, 39, 39);
+}
+
+.seasonbox {
+    display: none;
+    width: 85%;
+    font-size: 2rem;
+    text-align: center;
+    background-color: rgb(71, 67, 67);
+}
+
+.seasontable {
+    padding: 0 2rem;
+    width: 100%;
+    table-layout: fixed;
+    border-spacing: 0 1rem;
+}
+
+.seasontable td {
+    width: 5rem;
+    vertical-align: middle;
+}
+
+.spacer {
+    width: 25% !important;
+}
+
+.leftlogo {
+    text-align: left;
+}
+
+.draftpic {
+    width: 4rem;
+    height: auto;
+    display: inline-block;
+}
+
+
+/* --- Animations --- */

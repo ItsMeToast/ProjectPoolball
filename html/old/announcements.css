@@ -1,0 +1,188 @@
+/* News page styles */
+
+@font-face {
+    font-family: funFont;
+    src: url(fonts/LondrinaSolid-Regular.ttf);
+}
+
+.sidebar {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(71, 67, 67);
+    overflow-x:hidden;
+    overflow-y: scroll;
+    padding: 15px;
+    font-family: funFont;
+    color:white;
+    font-size: 1.6vw;
+}
+
+.sb-break {
+    height:2px;
+    background-color:white;
+    position:absolute;
+    width:94%;
+}
+
+.news-break {
+    height: 3px;
+    background-color: white;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    width: 90%;
+}
+
+.teamlogo {
+    position:relative;
+    height:2.5rem;
+    width:auto;
+}
+
+.trade {
+    padding: 7px 0px 7px 0px;
+}
+
+#transactionstitle {
+    color:white;
+    text-align: center;
+    position:relative;
+    font-size: 3.2vw;
+    padding-top: 12vh;
+}
+
+#news-title {
+    text-align:center;
+    font-size: 4.6vw;
+}
+
+.news-sec {
+    width:70%;
+    left:0;
+    top:0;
+    height: auto;
+    overflow-x:hidden;
+    overflow-y: scroll;
+    color:white;
+    font-family: funFont;
+    font-size:2vw;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.headline {
+    width:60%;
+    height:35vh;
+    margin:14px;
+    padding:5px;
+}
+
+.headline-title {
+    text-align: center;
+    font-size:2.6vw;
+}
+
+.headline-cont {
+    float: left;
+    font-size:1.8vw;
+}
+
+.thumbnail {
+    width:30%;
+    height:35vh;
+    margin: 14px;
+    padding:5px;
+}
+
+.tn-img {
+    display:block;
+    margin:auto;
+    width:auto;
+    height:auto;
+    max-width: 100%;
+    max-height: 35vh;
+
+}
+
+body {
+    margin: 0;
+    padding-top: 6rem;
+    background-color: rgb(90, 86, 86);
+}
+
+.layout {
+    margin-top: 1rem;
+}
+
+.layout td {
+    padding: 2rem;
+    width: 25%;
+}
+
+.ball {
+    width: 20%;
+    height: auto;
+
+    -webkit-animation: spin 5s ease-in-out infinite;
+    -moz-animation: spin 5s ease-in-out infinite;
+    animation: spin 5s ease-in-out infinite;
+}
+
+.button {
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 230% 500%;
+    background-position: 100%;
+
+    border: 4px solid rgb(255, 255, 255);
+    transition: all 0.5s ease;
+    padding: 5px 10px 5px 10px;
+}
+
+.button:hover {
+    color:rgb(0, 0, 0);
+    cursor: pointer;
+    background-position: 10%;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    padding: 1rem 0rem;
+}
+
+.media {
+    width: 3rem;
+    height: auto;
+}
+
+footer ul {
+    float: right;
+    margin: 0;
+    margin-right: 3rem;
+    padding: 0;
+    list-style: none;
+}
+
+footer li {
+    display: inline-block;
+    margin: 0rem 0.5rem;
+}
+
+
+
+/* --- Animations --- */

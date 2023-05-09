@@ -1,0 +1,24 @@
+/* Manager waivers page styles */
+
+.team {
+    width: 75%;
+    border: 1px solid rgb(0, 0, 0);
+    table-layout: fixed;
+    background-color: rgb(255, 255, 255);
+}
+
+.team tr {
+    font-size: 1.2rem;
+    height: 2rem !important;    
+}
+
+.team td {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+.tablehead {
+    font-weight: bold;
+    background-color: rgb(172, 172, 172);
+}
+
+/* --- Animations --- */

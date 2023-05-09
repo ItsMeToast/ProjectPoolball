@@ -1,0 +1,125 @@
+<!-- Poolball GMs All Players -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="allplayers.css">
+    <link rel="stylesheet" href="navbar.css">
+
+    <title>Poolball GMs</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="images/site.webmanifest">
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+</head>
+
+<!-- HTML site body -->
+
+    <body>
+
+    <!-- Navbar -->
+    <header>
+        <a href="index.html"><img src="images/logo.png" alt="logo" class="logo"></a>
+        
+        <nav>
+          <ul>
+            <div class="dropdown">
+                <li>
+                    <button class="dropbtn">NEWS</button>
+                    <div class="dropcontent">
+                        <a href="announcements.html">Announcements</a>
+                        <a href="scores.html">Scores</a>
+                        <a href="standings.html">Standings</a>
+                        <a href="transactions.html">Transactions</a>
+                    </div>
+                </li>
+            </div>
+
+            <a href="teams.html"><li>TEAMS</li></a>
+
+            <div class="dropdown open">
+                <li>
+                    <button class="dropbtn">PLAYERS</button>
+                    <div class="dropcontent">
+                        <a href="allplayers.html" class="open">All Players</a>
+                        <a href="prospects.html">Prospects</a>
+                        <a href="halloffame.html">Hall of Fame</a>
+                    </div>
+                </li>
+            </div>
+
+            <a href="login.html" class="navlogin"><li>LOGIN</li></a>
+          </ul>
+        </nav>
+
+    </header>
+
+    <div class="titlebox">
+        <h1 class="title">All Players</h1>
+        <form class="searchform">
+            <input type="text" placeholder="Search by Last Name" class="searchbar" name="search"><br>
+            <input type="submit" value="Search" class="submitbtn">
+        </form>
+    </div>
+    
+
+    <div class="tablebox">
+        <table class="playertable">
+            <tr class="tablehead">
+                <td>Name</td>
+                <td>Position</td>
+                <td>Age</td>
+                <td>Team</td>
+                <td>Stars</td>
+                <td>GP</td>
+                <td>G</td>
+            </tr>
+
+            <!-- These are just examples -->
+            <!-- Start Player Entry -->
+            <tr class="playerentry">
+                <td class="name"><a href="#">Jasper Nefeli</a></td>
+                <td class="position">All Around</td>
+                <td class="age">22</td>
+                <td class="team"><a href="teamtemplate.html">HSN</a></td>
+                <td class="stars">5</td>
+                <td class="games">6</td>
+                <td class="goals">4</td>
+            </tr>
+
+            <!-- Start Player Entry -->
+            <tr class="playerentry">
+                <td class="name"><a href="#">Matthew Ramsay</a></td>
+                <td class="position">Defender</td>
+                <td class="age">29</td>
+                <td class="team"><a href="teamtemplate.html">LAA</a></td>
+                <td class="stars">5</td>
+                <td class="games">43</td>
+                <td class="goals">21</td>
+            </tr>
+
+            <!-- Start Player Entry -->
+            <tr class="playerentry">
+                <td><a href="#">Andrew Sly</a></td>
+                <td>All Around</td>
+                <td>25</td>
+                <td><a href="teamtemplate.html">NYL</a></td>
+                <td>4</td>
+                <td>21</td>
+                <td>15</td>
+            </tr>
+        </table>
+    </div>
+
+    </body>
+
+</html>
