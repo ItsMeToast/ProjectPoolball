@@ -1,0 +1,36 @@
+/* Custom Colors (see color palette)*/
+:root {
+    --dark: #00072d;
+    --navy: #023e8a;
+    --sea: #0096c7;
+    --sky: #90e0ef;
+    --bone: #f9f9f7;
+
+    --crimson: #ee3d3d;
+    --saffron: #ffc633;
+    --spring: #2deb95;
+    --violet: #f9f9f7;
+    --rose: #ff85a1;
+}
+
+
+/* Custom Fonts */
+@font-face {
+    font-family: funFont;
+    src: url(assets/LondrinaSolid-Regular.ttf);
+}
+
+@font-face {
+    font-family: racer;
+    src: url(assets/TechnoRace-Regular.ttf);
+}
+
+@font-face {
+    font-family: racerItalic;
+    src: url(assets/TechnoRace-Italic.otf);
+}
+
+@font-face {
+    font-family: basic;
+    src: url(assets/Courier\ Prime\ Sans.ttf);
+}
