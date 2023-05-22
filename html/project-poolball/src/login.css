@@ -1,0 +1,81 @@
+/* Login page styles */
+
+body {
+  height: 100vh;
+
+  background: linear-gradient(228deg, #ee6237, #e73c7e, #23a6d5, #7df57f);
+  background-size: 200% 200%;
+
+  -webkit-animation: gradientBackground 10s ease infinite;
+  -moz-animation: gradientBackground 10s ease infinite;
+  animation: gradientBackground 10s ease infinite;
+}
+
+.login-box {
+  border-radius: 20px;
+  border: 10px solid var(--sky);
+  background-color: #ffffff;
+}
+
+.title {
+  font-size: 5rem;
+  font-family: racerItalic;
+  color: var(--dark);
+}
+
+.title-link {
+  text-decoration: none;
+  color: var(--dark);
+}
+
+.title-link:hover {
+  color: var(--sea);
+}
+
+.link-default {
+  font-size: 1rem;
+  color: var(--dark);
+
+  transition: 0.3s ease;
+}
+
+.link-default:hover {
+  color: var(--sea);
+}
+
+/* --- Animations --- */
+
+/* Gradient Background Animation */
+@-webkit-keyframes gradientBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+@-moz-keyframes gradientBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+@keyframes gradientBackground {
+  0% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}

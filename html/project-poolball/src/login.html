@@ -5,91 +5,58 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="src/login.css" />
-    <link rel="stylesheet" href="src/resources.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="resources.css" />
 
     <title>Poolball GMs</title>
 
     <!-- favicon -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="src/assets/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="src/assets/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="src/assets/favicon-16x16.png"
-    />
-    <link rel="manifest" href="src/assets/site.webmanifest" />
-    <link
-      rel="mask-icon"
-      href="src/assets/safari-pinned-tab.svg"
-      color="#5bbad5"
-    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
 
   <!-- HTML site body -->
   <body>
-    <div class="container text-center d-flex flex-wrap flex-column">
-      <div class="row">
-        <div class="col">
-          <h1 class="title">Poolball GMs</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img
-            src="src/assets/logowhite.png"
-            alt="poolball"
-            class="img-fluid ball"
-          />
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="login.html"><button class="button">Log In</button></a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <a href="guest.html" class="guest">View as Guest</a>
+    <script type="module" src="bootstrap.tsx"></script>
+
+    <div class="container-fluid h-100">
+      <div class="row align-items-center h-100">
+        <div class="container col-12 mx-auto login-box w-50 px-3 py-4 text-start">
+          <div class="row row-cols-1">
+            <div class="col text-center my-4">
+              <h1 class="title"><a href="../index.html" class="title-link">Poolball GMs</a></h1>
+            </div>
+
+            <form class="col-12">
+              <div class="form-floating mb-3 mx-4">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                <label for="floatingInput">Email</label>
+              </div>
+
+              <div class="form-floating mx-4">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+                <div id="passwordHelpBlock" class="form-text">
+                  Contact ItzToast on Discord if you have forgotten your login information
+                </div>
+              </div>
+
+              <div class="form-floating text-center">
+                <button type="submit" class="btn btn-lg btn-primary mt-5 px-5">Log in</button>
+              </div>
+            </form>
+
+            <div class="col text-center my-4">
+              <a href="../index.html" class="link-default">Back to homepage</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <script type="module" src="/src/main.tsx"></script>
-
-    <!-- Footer -->
-    <footer>
-      <ul>
-        <li>
-          <a
-            href="https://discord.com/channels/872517520341467146/872518021057495140"
-            target="”_blank”"
-          >
-            <img src="src/assets/Discord-Logo-White.png" class="media" />
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="https://github.com/ItsMeToast/ProjectPoolball"
-            target="”_blank”"
-          >
-            <img src="src/assets/GitHub-Logo-White.png" class="media" />
-          </a>
-        </li>
-      </ul>
-    </footer>
   </body>
 </html>
