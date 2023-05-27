@@ -18,7 +18,7 @@ body {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 5vw;
   font-family: racerItalic;
   color: var(--dark);
 }
