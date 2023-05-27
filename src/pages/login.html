@@ -1,0 +1,63 @@
+<!-- Poolball GMs Project -->
+<!-- LOGIN PAGE -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="resources.css" />
+
+    <title>Poolball GMs</title>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+
+  <!-- HTML site body -->
+  <body>
+    <div class="container-fluid h-100">
+      <div class="row align-items-center h-100">
+        <div class="container col-12 mx-auto login-box w-50 px-3 py-4 text-start">
+          <div class="row row-cols-1">
+            <div class="col text-center my-4">
+              <h1 class="title"><a href="../../index.html" class="title-link">Poolball GMs</a></h1>
+            </div>
+
+            <form action="managerhub.html" class="col-12">
+              <div class="form-floating mb-3 mx-4">
+                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" />
+                <label for="floatingInput">Email</label>
+              </div>
+
+              <div class="form-floating mx-4">
+                <input type="password" class="form-control" id="floatingPassword" placeholder="Password" />
+                <label for="floatingPassword">Password</label>
+                <div id="passwordHelpBlock" class="form-text">
+                  Contact ItzToast on Discord if you have forgotten your login information
+                </div>
+              </div>
+
+              <div class="form-floating text-center">
+                <a href="managerhub.html">
+                  <button type="submit" class="btn btn-lg btn-primary mt-5 px-5">Log in</button>
+                </a>
+              </div>
+            </form>
+
+            <div class="col text-center my-4">
+              <a href="../../index.html" class="link-default">Back to homepage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
