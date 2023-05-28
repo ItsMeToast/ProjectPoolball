@@ -9,20 +9,52 @@
     <link rel="stylesheet" href="league.css" />
     <link rel="stylesheet" href="resources.css" />
 
-    <title>Poolball GMs</title>
+    <title>Poolball GMs League</title>
 
     <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
-    <link rel="manifest" href="assets/site.webmanifest" />
-    <link rel="mask-icon" href="assets/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../public/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../public/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../public/favicon-16x16.png" />
+    <link rel="manifest" href="../public/site.webmanifest" />
+    <link rel="mask-icon" href="../public/safari-pinned-tab.svg" color="#5bbad5" />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
   </head>
 
   <!-- HTML site body -->
   <body>
-    <div>LEAGUE</div>
+    <!-- Banner -->
+    <div class="d-flex flex-column h-100 mx-auto">
+      <div class="banner row text-center align-items-center mx-0">
+        <div class="col px-0 text-start">
+          <img class="banner-image" src="../public/shieldLogoMix.png" />
+        </div>
+        <div class="col px-0"><a class="banner-title" href="../../index.html">Poolball GMs</a></div>
+        <div class="col px-0 sign-in text-end">
+          <a href="login.html">
+            <button class="sign-in-btn">
+              <img src="../public/profile.png" class="profile" />
+              Log In
+            </button>
+          </a>
+        </div>
+      </div>
+
+      <!-- Page Content -->
+      <div class="row h-100 mx-0">
+        <!-- Sidebar -->
+        <nav class="sidebar col-2 h-100 container d-flex flex-column px-0">
+          <div class="sidebtn active">Home</div>
+          <div class="sidebtn">News</div>
+          <div class="sidebtn">Teams</div>
+          <div class="sidebtn">Games</div>
+          <div class="sidebtn">Players</div>
+          <div class="sidebtn">Minors</div>
+          <div class="sidebtn">Archive</div>
+          <div class="sidebtn">Rules</div>
+        </nav>
+        <div class="content-box col px-0"></div>
+      </div>
+    </div>
   </body>
 </html>

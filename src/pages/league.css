@@ -1,1 +1,90 @@
 /* League page styles */
+
+body {
+  height: 100vh;
+}
+
+.banner-image {
+  min-width: 50px;
+  width: 15%;
+  height: auto;
+  margin-left: 20px;
+}
+
+.banner-title {
+  font-size: calc(2rem + 2vw);
+  font-family: racerItalic;
+  text-decoration: none;
+  color: var(--dark);
+
+  transition: 0.3s ease-in-out;
+}
+
+.banner-title:hover {
+  color: var(--sea);
+}
+
+.sign-in {
+  height: 100%;
+  padding: 0 10px;
+}
+
+.profile {
+  height: 1.8rem;
+  width: auto;
+  margin-top: -4px;
+}
+
+.sign-in-btn {
+  font-size: 1.6rem;
+  font-family: basic;
+  height: 100%;
+  border: none;
+  background-color: var(--bone);
+  border-left: 4px solid var(--sea);
+  width: 40%;
+  min-width: 200px;
+}
+
+.sign-in-btn:hover {
+  background-color: var(--spring);
+}
+
+.sidebar {
+  min-width: 200px;
+  max-width: 300px;
+
+  border-top: 3px solid var(--sea);
+  border-left: 3px solid var(--sea);
+}
+
+.sidebtn {
+  min-height: 40px;
+  height: 12.5%;
+  border-bottom: 3px solid var(--sea);
+  border-right: 3px solid var(--sea);
+  cursor: pointer;
+
+  font-size: 1.6rem;
+  color: var(--dark);
+  font-family: basic;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 0.2s ease-in-out;
+}
+
+.sidebtn.active {
+  background-color: var(--lightsky);
+  border-right: none;
+}
+
+.sidebtn:hover {
+  background-color: var(--sky);
+}
+
+.content-box {
+  background-color: rgb(206, 206, 206);
+}
