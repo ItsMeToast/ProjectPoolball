@@ -34,8 +34,19 @@ class Player:
         self.team = None
         self.contract = [None, None]
 
+    """def age_player(self):
+        self.age += 1
+        if self.age <= 25:
+            self.pow += randint(1, )
+        elif self.age <= 27:
+
+        elif self.age <= 29:
+
+        else:
+            #retire"""
+
     def __str__(self):
-        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats({7}, {8}, {9}, {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
+        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
     
 new_player = Player()
 

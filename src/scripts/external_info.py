@@ -20,7 +20,7 @@ traits = [
     ["Whimp", 0, ["Playmaker", "Distributor", "Defender"]],
     ["Dumb", 0, ["Finisher", "Two-Way", "Defender"]],
     ["Dead Weight", 0, ["Attacker", "Two-Way", "Distributor"]],
-    ["Tiny", 0, ["Attacker", "Finisher", "Playmaker"]],
+    ["Scared", 0, ["Attacker", "Finisher", "Playmaker"]],
     ["Speedster", 0, ["Finisher", "Playmaker", "Defender"]],
     ["Pass-First", 0, ["Attacker", "Playmaker", "Distributor"]],
     ["Hardened", 0, ["Distributor", "Defender"]],
