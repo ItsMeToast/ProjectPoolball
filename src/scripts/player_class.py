@@ -6,55 +6,47 @@ class Player:
     def __init__(self):
         self.firstname = fn[randint(0, len(fn)-1)]
         self.lastname = ln[randint(0, len(ln)-1)]
-        self.pow = randint(50, 70)
-        self.int = randint(50, 70)
-        self.sze = randint(50, 70)
-        self.spd = randint(50, 70)
-        self.acc = randint(50, 70)
-        self.exp = randint(50, 70)
-        self.blc = randint(50, 70)
-        self.end = randint(50, 70)
+        self.style = styles[randint(0,5)]
+        determine_starting_stats(self, self.style)
+        self.potential = curved_potential()
+        self.pow += math.floor(random()/10*6*self.potential)
+        self.int += math.floor(random()/10*6*self.potential)
+        self.sze += math.floor(random()/10*6*self.potential)
+        self.spd += math.floor(random()/10*6*self.potential)
+        self.acc += math.floor(random()/10*6*self.potential)
+        self.exp += math.floor(random()/10*6*self.potential)
+        self.blc += math.floor(random()/10*6*self.potential)
+        self.end += math.floor(random()/10*6*self.potential)
         self.GS = (self.pow + self.acc + self.exp)/3
         self.PM = (self.int + self.acc + self.blc)/3
         self.SW = (self.spd + self.exp + self.end)/3
-        self.DB = (self.sze + self.blc + self.end)/3
-        self.overall = round((self.GS + self.PM + self.SW + self.DB)/4)
+        self.DF = (self.sze + self.blc + self.end)/3
+        self.overall = round((self.GS + self.PM + self.SW + self.DF)/4)
         self.GS = round(self.GS)
         self.PM = round(self.PM)
         self.SW = round(self.SW)
-        self.DB = round(self.DB)
-        #Determining Style Based on Stats
-        list = [[self.GS, 'gs'], [self.PM, 'pm'], [self.SW, 'sw'], [self.DB, 'db']]
-        for i in range(len(list)):
-            max = i
-            for j in range(i+1, len(list)):
-                if list[j][0] > list[max][0]:
-                    max = j
-            
-            list[i], list[max] = list[max], list[i]
-        str = list[0][1]+list[1][1]
-        if 'gs' in str and 'pm' in str:
-            self.style = "Attacker"
-        elif 'gs' in str and 'sw' in str:
-            self.style = "Finisher"
-        elif 'gs' in str and 'db' in str:
-            self.style = "All Around"
-        elif 'pm' in str and 'sw' in str:
-            self.style = "Playmaker"
-        elif 'pm' in str and 'db' in str:
-            self.style = "Distributer"
-        elif 'sw' in str and 'db' in str:
-            self.style = "Defender"
+        self.DF = round(self.DF)
+        
         #Trait
-        self.trait = traits[randint(0, len(traits)-1)]
+        self.trait = determine_trait(self.style, self.potential)
         self.age = 20
-        self.injury = random()*10
-        self.potential = randint(1, 10)
+        self.injury = round(randint(6, 9)+random(), 1)
         self.team = None
-        self.contract = None
+        self.contract = [None, None]
+
+    """def age_player(self):
+        self.age += 1
+        if self.age <= 25:
+            self.pow += randint(1, )
+        elif self.age <= 27:
+
+        elif self.age <= 29:
+
+        else:
+            #retire"""
 
     def __str__(self):
-        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats({7}, {8}, {9}, {10}, {11})".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DB, self.overall)
+        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
     
 new_player = Player()
 
