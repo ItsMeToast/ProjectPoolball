@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="src/pages/index.css" />
     <link rel="stylesheet" href="src/pages/resources.css" />
 
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
     <title>Poolball GMs</title>
 
     <!-- favicon -->
@@ -22,8 +24,16 @@
   </head>
 
   <!-- HTML site body -->
-
   <body>
+    <audio muted playsinline id="song">
+      <source src="src/public/openingSong.mp3" type="audio/mpeg" />
+      <source src="src/public/openingSong.ogg" type="audio/ogg" />
+    </audio>
+
+    <script src="src/pages/index.js"></script>
+
+    <img src="src/public/noaudio.png" id="audio-btn" />
+
     <div class="container text-center d-flex flex-column h-100">
       <div class="row">
         <div class="col">

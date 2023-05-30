@@ -12,6 +12,23 @@ body {
   animation: gradientBackground 20s ease infinite;
 }
 
+#audio-btn {
+  position: absolute;
+  height: 80px;
+  width: auto;
+  bottom: 20px;
+  left: 20px;
+  cursor: pointer;
+
+  transition: 0.3s ease-in-out;
+}
+
+#audio-btn:hover {
+  height: 90px;
+  bottom: 15px;
+  left: 15px;
+}
+
 .title {
   font-size: 10vw;
   font-family: racerItalic;
@@ -74,8 +91,7 @@ footer {
   bottom: 0;
   right: 0;
   text-align: center;
-  padding: 2rem;
-  margin-bottom: 2rem;
+  padding: 20px;
 }
 
 .media {
