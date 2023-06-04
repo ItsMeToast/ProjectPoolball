@@ -12,6 +12,44 @@ body {
   animation: gradientBackground 20s ease infinite;
 }
 
+.popup {
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-info {
+  width: 40%;
+  height: auto;
+
+  background-color: var(--bone);
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  padding: 50px 25px;
+}
+
+#popup-btn {
+  margin-top: 50px;
+  font-size: 2rem;
+  font-family: basic;
+  padding: 5px;
+  background-color: var(--sky);
+  border: none;
+  width: 50%;
+
+  transition: 0.2s ease;
+}
+
+#popup-btn:hover {
+  background-color: var(--sea);
+}
+
 #audio-btn {
   position: absolute;
   height: 80px;
