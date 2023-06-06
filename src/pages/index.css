@@ -36,12 +36,12 @@ body {
 
 #popup-btn {
   margin-top: 50px;
-  font-size: 2rem;
+  font-size: calc(1rem+0.2vw);
   font-family: basic;
-  padding: 5px;
+  padding: 10px 20px;
   background-color: var(--sky);
   border: none;
-  width: 50%;
+  width: auto;
 
   transition: 0.2s ease;
 }

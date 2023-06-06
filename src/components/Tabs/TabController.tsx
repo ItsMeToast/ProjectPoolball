@@ -1,7 +1,13 @@
+import React, { useState } from "react";
+
 import HomeTab from "./HomeTab";
 import TeamsTab from "./TeamsTab";
 import NewsTab from "./NewsTab";
-import React, { useState } from "react";
+import GamesTab from "./GamesTab";
+import PlayersTab from "./PlayersTab";
+import MinorsTab from "./MinorsTab";
+import ArchiveTab from "./ArchiveTab";
+import RulesTab from "./RulesTab";
 
 function TabController() {
   const [activeTab, setActiveTab] = useState("Home");
@@ -11,7 +17,26 @@ function TabController() {
   };
 
   const renderTab = () => {
-    return <h1>{activeTab}</h1>;
+    if (activeTab == "Home") {
+      return <HomeTab />;
+    } else if (activeTab == "News") {
+      return <NewsTab />;
+    } else if (activeTab == "Teams") {
+      return <TeamsTab />;
+    } else if (activeTab == "Games") {
+      return <GamesTab />;
+    } else if (activeTab == "Players") {
+      return <PlayersTab />;
+    } else if (activeTab == "Minors") {
+      return <MinorsTab />;
+    } else if (activeTab == "Archive") {
+      return <ArchiveTab />;
+    } else if (activeTab == "Rules") {
+      return <RulesTab />;
+    } else {
+      setActiveTab("Home");
+      return <HomeTab />;
+    }
   };
 
   return (
