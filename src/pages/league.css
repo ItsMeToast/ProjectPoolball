@@ -4,6 +4,11 @@ body {
   height: 100vh;
 }
 
+.banner {
+  background-color: var(--bone);
+  border-bottom: 4px solid var(--sea);
+}
+
 .banner-image {
   min-width: 50px;
   width: 15%;
@@ -54,8 +59,9 @@ body {
   min-width: 200px;
   max-width: 300px;
 
-  border-top: 3px solid var(--sea);
+  /*border-top: 3px solid var(--sea);
   border-left: 3px solid var(--sea);
+  */
 }
 
 .sidebtn {
@@ -86,5 +92,10 @@ body {
 }
 
 .content-box {
-  background-color: rgb(206, 206, 206);
+  background-color: var(--bone);
+  display: flex;
+}
+
+.tab-display {
+  display: flex;
 }
