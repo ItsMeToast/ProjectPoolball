@@ -76,7 +76,9 @@ function TabController() {
           Rules
         </div>
       </nav>
-      <div id="tab-display" className="tab-display col px-0 mx-auto justify-content-center align-items-center">
+
+      {/* Render the Active Tab*/}
+      <div id="tab-display" className="tab-display col px-0 h-100 w-100">
         {renderTab()}
       </div>
     </div>
