@@ -1,9 +1,8 @@
-from external_info import dynamic_potential
+from player_class import *
 
-results = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-for i in range(10000):
-    num = dynamic_potential()
-    results[num-1] += 1
-
-print(results)
+phil = Player()
+print(phil, "\n")
+for i in range(9):
+    phil.age_player()
+    print(phil, "\n")
+    
