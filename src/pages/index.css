@@ -77,9 +77,6 @@ body {
   width: 15%;
   height: auto;
 
-  pointer-events: none;
-  user-select: none;
-
   -webkit-animation: spin 10s ease-in-out infinite;
   -moz-animation: spin 10s ease-in-out infinite;
   animation: spin 10s ease-in-out infinite;

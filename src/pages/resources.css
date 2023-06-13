@@ -15,6 +15,12 @@
   --rose: #ff85a1;
 }
 
+/* Useful Classes */
+.no-interact {
+  user-select: none;
+  pointer-events: none;
+}
+
 /* Custom Fonts */
 @font-face {
   font-family: funFont;

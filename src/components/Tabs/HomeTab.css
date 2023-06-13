@@ -6,22 +6,26 @@
 }
 
 .home-display-box {
-  width: 60%;
-  height: 60%;
-  background-color: #023d8a7c;
-
-  border-radius: calc(5px + 1vw);
-
   display: flex;
+}
+
+.home-intro {
+  font-family: basic;
+  font-size: calc(0.2rem + 2vw);
+  color: var(--bone);
 }
 
 .home-title {
   font-family: racerItalic;
-  font-size: calc(2rem + 5vw);
-  color: var(--dark);
+  font-size: calc(3rem + 5vw);
+  color: var(--bone);
+
+  filter: drop-shadow(0 0 6px var(--bone));
 }
 
 .home-team {
   width: calc(100px + 5vw);
   height: auto;
+
+  filter: drop-shadow(0 0 15px var(--navy));
 }
