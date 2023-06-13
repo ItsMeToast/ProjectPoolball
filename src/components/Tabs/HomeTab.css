@@ -24,8 +24,8 @@
 }
 
 .home-team {
-  width: calc(100px + 5vw);
+  width: calc(100px + 8vw);
   height: auto;
 
-  filter: drop-shadow(0 0 15px var(--navy));
+  filter: drop-shadow(0 0 20px var(--HSN-main));
 }
