@@ -78,7 +78,7 @@ function TabController() {
       </nav>
 
       {/* Render the Active Tab*/}
-      <div id="tab-display" className="tab-display col px-0 h-100 w-100">
+      <div id="tab-display" className="tab-display col px-0">
         {renderTab()}
       </div>
     </div>

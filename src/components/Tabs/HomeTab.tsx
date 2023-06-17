@@ -25,24 +25,36 @@ $(function () {
   function logoSwap() {
     let logos = [
       "../public/HSN.png",
-      "../public/NYL.png",
+      "../public/NYR.png",
       "../public/HAV.png",
       "../public/MBS.png",
-      "../public/MCM.png",
+      "../public/MCC.png",
       "../public/LAA.png",
       "../public/CHI.png",
       "../public/TOR.png",
+      "../public/ATL.png",
+      "../public/BOS.png",
+      "../public/CGY.png",
+      "../public/MIA.png",
+      "../public/NOS.png",
+      "../public/SEA.png",
     ];
 
     let glow = [
       "drop-shadow(0 0 20px var(--HSN-main))",
-      "drop-shadow(0 0 30px var(--NYL-main))",
+      "drop-shadow(0 0 30px var(--NYR-main))",
       "drop-shadow(0 0 20px var(--HAV-main))",
       "drop-shadow(0 0 20px var(--MBS-main))",
-      "drop-shadow(0 0 20px var(--MCM-main))",
+      "drop-shadow(0 0 20px var(--MCC-main))",
       "drop-shadow(0 0 20px var(--LAA-main))",
       "drop-shadow(0 0 20px var(--CHI-main))",
       "drop-shadow(0 0 20px var(--TOR-main))",
+      "drop-shadow(0 0 20px var(--ATL-main))",
+      "drop-shadow(0 0 20px var(--BOS-main))",
+      "drop-shadow(0 0 20px var(--CGY-main))",
+      "drop-shadow(0 0 20px var(--MIA-main))",
+      "drop-shadow(0 0 20px var(--NOS-main))",
+      "drop-shadow(0 0 20px var(--SEA-main))",
     ];
 
     const url: string = $(".home-team").attr("src") ?? logos[0];
@@ -57,7 +69,7 @@ $(function () {
     }
   }
 
-  setInterval(logoSwap, 1000);
+  setInterval(logoSwap, 600);
 });
 
 export default HomeTab;
