@@ -17,6 +17,11 @@ class Player:
         self.exp += math.floor(random()/10*6*self.potential)
         self.blc += math.floor(random()/10*6*self.potential)
         self.end += math.floor(random()/10*6*self.potential)
+        self.trait = determine_trait(self.style, self.potential)
+        if self.trait[0] == "Giant":
+            self.sze += 10
+            if self.sze > 99:
+                self.sze = 99
         self.GS = (self.pow + self.acc + self.exp)/3
         self.PM = (self.int + self.acc + self.blc)/3
         self.SW = (self.spd + self.exp + self.end)/3
@@ -27,7 +32,6 @@ class Player:
         self.SW = round(self.SW)
         self.DF = round(self.DF)
         
-        self.trait = determine_trait(self.style, self.potential)
         self.growth_style = "Development"
         self.age = 20
         self.injury = round(randint(6, 9)+random(), 1)
@@ -44,6 +48,10 @@ class Player:
             nums = []
             for i in range(7):
                 nums.append(math.ceil(random()*(self.potential)/2))
+                if self.trait[0] == "Prodigy":
+                    nums[i] += 1
+                if self.trait[0] == "Stunted":
+                    nums[i] -= randint(0,1)
             if self.age >= 24:
                 rand = randint(1, 100)
                 if self.age == 24 and rand >= 86 or self.age == 25 and rand >=41 or self.age == 26:
@@ -63,10 +71,34 @@ class Player:
                     self.growth_style = "Veteran"
             self.injury -= randint(-15, 15)/10
         else:
+            #VETERAN
             nums = []
             for i in range(7):
                 nums.append(-1*math.ceil(random()*(5-(self.potential/2))))
+                if self.trait[0] == "Dedicated" and nums[i] < 0:
+                    nums[i] += 1
+                if self.trait[0] == "Short-Lived":
+                    nums[i] -= 1
             self.injury -= randint(-20, -1)/10
+
+        if self.trait[0]=="Superstar":
+            for i in range(len(nums)):
+                if nums[i] < 1:
+                    nums[i] += 2
+                else:
+                    nums[i] += 1
+
+        if self.trait[0]=="Consistent":
+            for i in range(len(nums)):
+                if nums[i] < 0:
+                    nums[i] += 1
+                elif nums[1] > 0:
+                    nums[i] -= 1
+
+        if self.trait[0]=="Wildcard":
+            for i in range(len(nums)):
+                nums[i] += randint(-1, 1)
+
         if self.style == "Attacker":
             self.pow += (nums[0]+randint(0, 3))
             self.int += (nums[1]+randint(0, 3))
@@ -115,6 +147,65 @@ class Player:
             self.exp += (nums[4]+randint(-1, 2))
             self.blc += (nums[5]+randint(-1, 3))
             self.end += (nums[6]+randint(0, 5))
+
+        if self.trait[0] == "Scared":
+            self.blc -= 1
+            self.end -= 1
+        if self.trait[0] == "Speedster":
+            self.spd += 3
+            self.exp += 1
+            self.blc -= 1
+        if self.trait[0] == "Sniper":
+            self.pow += 1
+            self.acc += 1
+            self.exp += 1
+        if self.trait[0] == "Dead Weight":
+            self.spd -= 1
+            self.exp -= 1
+            self.end -= 1
+        if self.trait[0] == "Hardened":
+            self.end += 1
+            self.int += 1
+            self.injury -= 0.5
+        if self.trait[0] == "Genius":
+            self.int += 2
+            self.acc += 1
+            self.blc += 1
+        if self.trait[0] == "Pass-First":
+            self.int += 2
+            self.blc += 1
+            self.pow -= 1
+        if self.trait[0] == "Whimp":
+            self.pow -= 1
+            self.acc -= 1
+            self.exp -= 1
+        if self.trait[0] == "Giant":
+            self.blc += 1
+            self.end += 1
+        if self.trait[0] == "Agile":
+            self.injury += 0.5
+            self.spd += 1
+            self.exp += 1
+        if self.trait[0] == "Fish-Like":
+            self.spd += 1
+            self.exp += 1
+            self.end += 1
+        if self.trait[0] == "Selfish":
+            self.pow += 2
+            self.exp += 1
+            self.int -= 1
+        if self.trait[0] == "Dumb":
+            self.int -= 1
+            self.acc -= 1
+            self.blc -= 1
+        if self.trait[0] == "Brick Wall":
+            self.blc += 2
+            self.end += 1
+            self.spd -= 1
+        if self.trait[0] == "Hard Worker":
+            self.acc += 1
+            self.blc += 1
+
         if self.pow > 99:
             self.pow = 99
         if self.int > 99:
@@ -142,7 +233,7 @@ class Player:
         self.injury = round(self.injury, 1)
         if self.injury <= 0.1:
             self.injury == 0.1
-        
+
     def __str__(self):
-        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
-        #return "Age: {0}, GS {1}; PM {2}; SW {3}; DF {4}; Overall {5}; Potential {6}; STYLE - {7}".format(self.age, self.GS, self.PM, self.SW, self.DF, self.overall, self.potential, self.style)
+        #return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
+        return "Age: {0}, GS {1}; PM {2}; SW {3}; DF {4}; Overall {5}; Potential {6}; STYLE - {7}; TRAIT - {8} ; ".format(self.age, self.GS, self.PM, self.SW, self.DF, self.overall, self.potential, self.style, self.trait[0])
