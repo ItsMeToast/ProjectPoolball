@@ -44,8 +44,11 @@ class Player:
             nums = []
             for i in range(7):
                 nums.append(math.ceil(random()*(self.potential)/2))
-            if self.age == 25:
-                self.growth_style = "Prime"
+            if self.age >= 24:
+                rand = randint(1, 100)
+                if self.age == 24 and rand >= 86 or self.age == 25 and rand >=41 or self.age == 26:
+                    self.growth_style = "Prime"
+            self.injury -= randint(1, 20)/10
         elif self.growth_style == "Prime":
             nums = []
             for i in range(7):
@@ -54,12 +57,16 @@ class Player:
                     nums.append(math.ceil(random()*(self.potential)/3))
                 else:
                     nums.append(-1*math.ceil(random()*(3-(self.potential/4))))
-            if self.age == 27:
-                self.growth_style = "Veteran"
+            if self.age >= 26:
+                rand = randint(1, 100)
+                if self.age == 26 and rand >= 86 or self.age == 27 and rand >=41 or self.age == 28:
+                    self.growth_style = "Veteran"
+            self.injury -= randint(-15, 15)/10
         else:
             nums = []
             for i in range(7):
                 nums.append(-1*math.ceil(random()*(5-(self.potential/2))))
+            self.injury -= randint(-20, -1)/10
         if self.style == "Attacker":
             self.pow += (nums[0]+randint(0, 3))
             self.int += (nums[1]+randint(0, 3))
@@ -132,7 +139,10 @@ class Player:
         self.PM = round(self.PM)
         self.SW = round(self.SW)
         self.DF = round(self.DF)
+        self.injury = round(self.injury, 1)
+        if self.injury <= 0.1:
+            self.injury == 0.1
         
     def __str__(self):
-        #return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
-        return "Age: {0}, GS {1}; PM {2}; SW {3}; DF {4}; Overall {5}; Potential {6}; STYLE - {7}".format(self.age, self.GS, self.PM, self.SW, self.DF, self.overall, self.potential, self.style)
+        return "{0} {1}, Age: {2}, Style: {3}, Trait: {4}, {5} Star Potential, {6}, \nStats(GS {7}, PM {8}, SW {9}, DF {10}, {11}) Injury: {12}".format(self.firstname, self.lastname, self.age, self.style, self.trait[0], self.potential, self.team, self.GS, self.PM, self.SW, self.DF, self.overall, self.injury)
+        #return "Age: {0}, GS {1}; PM {2}; SW {3}; DF {4}; Overall {5}; Potential {6}; STYLE - {7}".format(self.age, self.GS, self.PM, self.SW, self.DF, self.overall, self.potential, self.style)
