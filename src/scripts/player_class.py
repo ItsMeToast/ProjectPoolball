@@ -51,7 +51,9 @@ class Player:
                 if self.trait[0] == "Prodigy":
                     nums[i] += 1
                 if self.trait[0] == "Stunted":
-                    nums[i] -= randint(0,1)
+                    a = randint(1,3)
+                    if a == 3:
+                        nums[i] -= 1
             if self.age >= 24:
                 rand = randint(1, 100)
                 if self.age == 24 and rand >= 86 or self.age == 25 and rand >=41 or self.age == 26:
@@ -74,11 +76,11 @@ class Player:
             #VETERAN
             nums = []
             for i in range(7):
-                nums.append(-1*math.ceil(random()*(5-(self.potential/2))))
+                nums.append(-1*math.ceil(random()*(6-(self.potential/2))))
                 if self.trait[0] == "Dedicated" and nums[i] < 0:
                     nums[i] += 1
                 if self.trait[0] == "Short-Lived":
-                    nums[i] -= 1
+                    nums[i] -= 2
             self.injury -= randint(-20, -1)/10
 
         if self.trait[0]=="Superstar":
@@ -90,14 +92,15 @@ class Player:
 
         if self.trait[0]=="Consistent":
             for i in range(len(nums)):
-                if nums[i] < 0:
+                if nums[i] < -2:
                     nums[i] += 1
-                elif nums[1] > 0:
+                elif nums[i] > 3:
                     nums[i] -= 1
 
         if self.trait[0]=="Wildcard":
             for i in range(len(nums)):
-                nums[i] += randint(-1, 1)
+                nums[i] += randint(-2, 2)
+           
 
         if self.style == "Attacker":
             self.pow += (nums[0]+randint(0, 3))

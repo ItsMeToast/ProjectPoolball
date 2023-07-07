@@ -52,12 +52,12 @@ def determine_trait(style, potential):
     while(True):
         num = randint(0, len(traits_copy)-1)
         trait = traits_copy[num]
-        if trait[0] == "Superstar" and potential >= 6:
-            break
-        elif trait[0] == "Goon" and potential <= 5:
-            break
-        elif style in trait[2] or trait[2] == []:
-            break
+        if style in trait[2] or trait[2] == []:
+            if trait[0] in ["Superstar", "Goon"]:
+                  if (trait[0] == "Superstar" and potential >= 6) or (trait[0] == "Goon" and potential <= 5):
+                      break  
+            else: 
+                break
         else:
             traits_copy.pop(num)
     return trait
