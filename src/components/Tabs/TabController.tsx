@@ -40,47 +40,70 @@ function TabController() {
   };
 
   return (
-    <div className="content-box px-0">
-      <nav className="sidebar col-2 h-100 container d-flex flex-column px-0">
-        <div className={activeTab === "Home" ? "sidebtn active" : "sidebtn"} onClick={() => handleTabSwitch("Home")}>
-          Home
+    <div className="tab-controller p-0 justify-content-center">
+      <div className="tab-nav w-100 text-center">
+        <div className="tab-nav-group">
+          <button
+            type="button"
+            className={activeTab === "Home" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Home")}
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            className={activeTab === "News" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("News")}
+          >
+            News
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Teams" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Teams")}
+          >
+            Teams
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Games" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Games")}
+          >
+            Games
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Players" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Players")}
+          >
+            Players
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Minors" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Minors")}
+          >
+            Minors
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Archive" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Archive")}
+          >
+            Archive
+          </button>
+          <button
+            type="button"
+            className={activeTab === "Rules" ? "tab-nav-btn active" : "tab-nav-btn"}
+            onClick={() => handleTabSwitch("Rules")}
+          >
+            Rules
+          </button>
         </div>
-        <div className={activeTab === "News" ? "sidebtn active" : "sidebtn"} onClick={() => handleTabSwitch("News")}>
-          News
-        </div>
-        <div className={activeTab === "Teams" ? "sidebtn active" : "sidebtn"} onClick={() => handleTabSwitch("Teams")}>
-          Teams
-        </div>
-        <div className={activeTab === "Games" ? "sidebtn active" : "sidebtn"} onClick={() => handleTabSwitch("Games")}>
-          Games
-        </div>
-        <div
-          className={activeTab === "Players" ? "sidebtn active" : "sidebtn"}
-          onClick={() => handleTabSwitch("Players")}
-        >
-          Players
-        </div>
-        <div
-          className={activeTab === "Minors" ? "sidebtn active" : "sidebtn"}
-          onClick={() => handleTabSwitch("Minors")}
-        >
-          Minors
-        </div>
-        <div
-          className={activeTab === "Archive" ? "sidebtn active" : "sidebtn"}
-          onClick={() => handleTabSwitch("Archive")}
-        >
-          Archive
-        </div>
-        <div className={activeTab === "Rules" ? "sidebtn active" : "sidebtn"} onClick={() => handleTabSwitch("Rules")}>
-          Rules
-        </div>
-      </nav>
-
-      {/* Render the Active Tab*/}
-      <div id="tab-display" className="tab-display col px-0">
-        {renderTab()}
       </div>
+
+      {/* Render Tab Content */}
+      {renderTab()}
     </div>
   );
 }

@@ -24,25 +24,18 @@
   <!-- HTML site body -->
   <body>
     <!-- Banner -->
-    <div class="d-flex flex-column h-100 mx-auto">
-      <div class="banner row text-center align-items-center mx-0">
-        <div class="col px-0 text-start">
-          <img class="banner-image no-interact" src="../public/shieldLogoMix.png" />
-        </div>
-        <div class="col-8 px-0"><a class="banner-title" href="../../index.html">Poolball GMs</a></div>
-        <div class="col-2 px-0 sign-in text-end">
-          <a href="login.html">
-            <button class="sign-in-btn">
-              <img src="../public/profile.png" class="profile" />
-              Log In
-            </button>
-          </a>
-        </div>
-      </div>
+    <nav class="banner text-center">
+      <a class="banner-title" href="../../index.html">Poolball GMs</a>
+      <a href="login.html">
+        <button class="sign-in-btn text-center align-middle">
+          <img src="../public/profile-white.png" class="profile" />
+          Sign In
+        </button>
+      </a>
+    </nav>
 
-      <!-- Page Content -->
-      <div id="tabs" class="row h-100 mx-0 overflow-auto"></div>
-      <script type="module" src="../components/Tabs.tsx"></script>
-    </div>
+    <!-- Page Content -->
+    <div id="tab-area" class="row h-100 w-100 m-0"></div>
+    <script type="module" src="../components/Tabs.tsx"></script>
   </body>
 </html>

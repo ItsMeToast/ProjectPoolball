@@ -9,12 +9,6 @@
   display: flex;
 }
 
-.home-intro {
-  font-family: basic;
-  font-size: calc(0.2rem + 2vw);
-  color: var(--bone);
-}
-
 .home-title {
   font-family: racerItalic;
   font-size: calc(3rem + 5vw);

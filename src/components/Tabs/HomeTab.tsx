@@ -6,9 +6,6 @@ function HomeTab() {
     <div className="home-tab h-100 w-100 justify-content-center align-items-center">
       <div className="home-display-box container flex-column text-center justify-content-center py-5">
         <div className="row">
-          <div className="home-intro no-interact col">Welcome to Poolball GMs</div>
-        </div>
-        <div className="row">
           <div className="home-title no-interact col">Season 0</div>
         </div>
         <div className="row">
@@ -69,7 +66,7 @@ $(function () {
     }
   }
 
-  setInterval(logoSwap, 600);
+  setInterval(logoSwap, 1000);
 });
 
 export default HomeTab;
