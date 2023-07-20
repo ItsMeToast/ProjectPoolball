@@ -1,34 +1,64 @@
 /* Custom Colors (see color palette)*/
 :root {
-  --coal: #1a1a1a;
-  --dark: #00072d;
-  --navy: #023e8a;
-  --sea: #0096c7;
-  --sky: #90e0ef;
-  --lightsky: #a7f2ff;
-  --ash: #d1d1d1;
-  --bone: #f9f9f7;
+  --coal: rgb(26, 26, 26);
+  --dark: rgb(0, 7, 45);
+  --navy: rgb(2, 62, 138);
+  --sea: rgb(0, 150, 199);
+  --sky: rgb(144, 224, 239);
+  --lightsky: rgb(167, 242, 255);
+  --ash: rgb(209, 209, 209);
+  --bone: rgb(249, 249, 247);
 
-  --crimson: #ee3d3d;
-  --saffron: #ffc633;
-  --spring: #2deb95;
-  --violet: #f9f9f7;
-  --rose: #ff85a1;
+  --crimson: rgb(238, 61, 61);
+  --saffron: rgb(255, 198, 51);
+  --spring: rgb(45, 235, 149);
+  --violet: rgb(249, 249, 247);
+  --rose: rgb(255, 133, 161);
 
-  --ATL-main: #ffffff;
-  --BOS-main: #0004ff;
-  --CGY-main: #ff9100;
-  --CHI-main: #471198;
-  --HAV-main: #fff600;
-  --HSN-main: #000000;
-  --LAA-main: #ff7f27;
-  --MBS-main: #1a1b9a;
-  --MCC-main: #32a46d;
-  --MIA-main: #00d9ff;
-  --NOS-main: #fbff00;
-  --NYR-main: #585858;
-  --SEA-main: #7bffff;
-  --TOR-main: #ff85a1;
+  --ATL-main: rgb(255, 255, 255);
+  --BOS-main: rgb(0, 4, 255);
+  --CGY-main: rgb(255, 145, 0);
+  --CHI-main: rgb(71, 17, 152);
+  --HAV-main: rgb(255, 246, 0);
+  --HSN-main: rgb(163, 0, 0);
+  --LAA-main: rgb(255, 127, 39);
+  --MBS-main: rgb(26, 27, 154);
+  --MCC-main: rgb(50, 164, 109);
+  --MIA-main: rgb(0, 217, 255);
+  --NOS-main: rgb(251, 255, 0);
+  --NYR-main: rgb(40, 40, 40);
+  --SEA-main: rgb(123, 255, 255);
+  --TOR-main: rgb(255, 133, 161);
+
+  --ATL-main-opacity: rgba(255, 255, 255, 0.7);
+  --BOS-main-opacity: rgba(0, 4, 255, 0.7);
+  --CGY-main-opacity: rgba(255, 145, 0, 0.7);
+  --CHI-main-opacity: rgba(71, 17, 152, 0.7);
+  --HAV-main-opacity: rgba(255, 246, 0, 0.8);
+  --HSN-main-opacity: rgba(163, 0, 0, 0.7);
+  --LAA-main-opacity: rgba(255, 127, 39, 0.8);
+  --MBS-main-opacity: rgba(26, 27, 154, 0.7);
+  --MCC-main-opacity: rgba(50, 164, 109, 0.8);
+  --MIA-main-opacity: rgba(0, 217, 255, 0.7);
+  --NOS-main-opacity: rgba(251, 255, 0, 0.7);
+  --NYR-main-opacity: rgba(40, 40, 40, 0.8);
+  --SEA-main-opacity: rgba(123, 255, 255, 0.7);
+  --TOR-main-opacity: rgba(255, 133, 161, 0.7);
+
+  --ATL-accent: var(--coal);
+  --BOS-accent: var(--bone);
+  --CGY-accent: var(--coal);
+  --CHI-accent: var(--bone);
+  --HAV-accent: var(--coal);
+  --HSN-accent: var(--bone);
+  --LAA-accent: var(--coal);
+  --MBS-accent: var(--bone);
+  --MCC-accent: var(--bone);
+  --MIA-accent: var(--coal);
+  --NOS-accent: var(--coal);
+  --NYR-accent: var(--bone);
+  --SEA-accent: var(--coal);
+  --TOR-accent: var(--coal);
 }
 
 /* Useful Classes */
