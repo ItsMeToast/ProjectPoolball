@@ -22,10 +22,10 @@ function TeamsTab() {
 
   return (
     <div className="teams-tab h-100 w-100 justify-content-center align-items-center">
-      <div className="teams-display-box container justify-content-center align-items-center p-0">
-        <div className="row row-cols-auto justify-content-center align-items-center">
+      <div className="teams-display-box container-fluid justify-content-center align-items-center px-4 m-0">
+        <div className="row justify-content-center align-items-center w-100">
           {teams.map((team) => (
-            <div className="col w-10 h-10 p-0">
+            <div className="col g-4 text-center justify-content-center align-self-start">
               <TeamCard code={team.code} name={team.name} />
             </div>
           ))}
