@@ -20,7 +20,7 @@
   --CGY-main: rgb(255, 145, 0);
   --CHI-main: rgb(71, 17, 152);
   --HAV-main: rgb(255, 246, 0);
-  --HSN-main: rgb(163, 0, 0);
+  --HSN-main: rgb(181, 11, 48);
   --LAA-main: rgb(255, 127, 39);
   --MBS-main: rgb(26, 27, 154);
   --MCC-main: rgb(50, 164, 109);
@@ -30,20 +30,20 @@
   --SEA-main: rgb(123, 255, 255);
   --TOR-main: rgb(255, 133, 161);
 
-  --ATL-main-opacity: rgba(255, 255, 255, 0.7);
-  --BOS-main-opacity: rgba(0, 4, 255, 0.7);
-  --CGY-main-opacity: rgba(255, 145, 0, 0.7);
-  --CHI-main-opacity: rgba(71, 17, 152, 0.7);
-  --HAV-main-opacity: rgba(255, 246, 0, 0.8);
-  --HSN-main-opacity: rgba(163, 0, 0, 0.7);
-  --LAA-main-opacity: rgba(255, 127, 39, 0.8);
-  --MBS-main-opacity: rgba(26, 27, 154, 0.7);
-  --MCC-main-opacity: rgba(50, 164, 109, 0.8);
-  --MIA-main-opacity: rgba(0, 217, 255, 0.7);
-  --NOS-main-opacity: rgba(251, 255, 0, 0.7);
-  --NYR-main-opacity: rgba(40, 40, 40, 0.8);
-  --SEA-main-opacity: rgba(123, 255, 255, 0.7);
-  --TOR-main-opacity: rgba(255, 133, 161, 0.7);
+  --ATL-main-opacity: rgba(255, 255, 255, 0.9);
+  --BOS-main-opacity: rgba(0, 4, 255, 0.9);
+  --CGY-main-opacity: rgba(255, 145, 0, 0.9);
+  --CHI-main-opacity: rgba(71, 17, 152, 0.9);
+  --HAV-main-opacity: rgba(255, 246, 0, 0.9);
+  --HSN-main-opacity: rgba(181, 11, 48, 0.9);
+  --LAA-main-opacity: rgba(255, 127, 39, 0.9);
+  --MBS-main-opacity: rgba(26, 27, 154, 0.9);
+  --MCC-main-opacity: rgba(50, 164, 109, 0.9);
+  --MIA-main-opacity: rgba(0, 217, 255, 0.9);
+  --NOS-main-opacity: rgba(251, 255, 0, 0.9);
+  --NYR-main-opacity: rgba(40, 40, 40, 0.9);
+  --SEA-main-opacity: rgba(123, 255, 255, 0.9);
+  --TOR-main-opacity: rgba(255, 133, 161, 0.9);
 
   --ATL-accent: var(--coal);
   --BOS-accent: var(--bone);

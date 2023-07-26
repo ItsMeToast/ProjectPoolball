@@ -1,4 +1,3 @@
-
 $(function() {
     const openingSong = $("#song");
     const audioBtn = $("#audio-btn");
