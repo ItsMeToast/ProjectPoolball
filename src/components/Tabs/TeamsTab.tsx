@@ -21,7 +21,7 @@ function TeamsTab() {
   ];
 
   return (
-    <div className="teams-tab h-100 w-100 justify-content-center align-items-center">
+    <div className="teams-tab h-100 w-100">
       <div className="teams-display-box container-fluid justify-content-center align-items-center px-4 m-0">
         <div className="row justify-content-center align-items-center w-100">
           {teams.map((team) => (

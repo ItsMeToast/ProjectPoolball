@@ -1,12 +1,5 @@
-.home-tab {
-  background-image: url(../../public/home-background.jpg);
-  background-size: cover;
-
-  display: flex;
-}
-
 .home-display-box {
-  display: flex;
+  padding-top: 3rem;
 }
 
 .home-title {

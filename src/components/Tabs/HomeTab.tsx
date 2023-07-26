@@ -3,8 +3,8 @@ import * as $ from "jquery";
 
 function HomeTab() {
   return (
-    <div className="home-tab h-100 w-100 justify-content-center align-items-center">
-      <div className="home-display-box container flex-column text-center justify-content-center py-5">
+    <div className="home-tab h-100 w-100">
+      <div className="home-display-box container-fluid flex-column text-center">
         <div className="row">
           <div className="home-title no-interact col">Season 0</div>
         </div>
