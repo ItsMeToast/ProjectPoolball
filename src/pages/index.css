@@ -36,7 +36,7 @@ body {
 
 #popup-btn {
   margin-top: 50px;
-  font-size: calc(1rem+0.2vw);
+  font-size: calc(1rem + 0.2vw);
   font-family: basic;
   padding: 10px 20px;
   background-color: var(--sky);

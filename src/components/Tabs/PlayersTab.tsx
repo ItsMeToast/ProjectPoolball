@@ -1,5 +1,28 @@
 function PlayersTab() {
-  return <h1>This is the Players Tab</h1>;
+  return (
+    <table className="players-table">
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Team</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Team</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Team</td>
+      </tr>
+      <tr>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Team</td>
+      </tr>
+    </table>
+  );
 }
 
 export default PlayersTab;

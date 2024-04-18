@@ -9,7 +9,7 @@ var con = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  con.query("SELECT * FROM players", function(err,result) {
+  con.query("SELECT * FROM players WHERE team=\"MBS\"", function(err,result) {
     if (err) throw err;
     console.log(result);
   });
