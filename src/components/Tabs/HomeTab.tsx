@@ -1,5 +1,5 @@
 import "./HomeTab.css";
-import * as $ from "jquery";
+import $ from "jquery";
 
 function HomeTab() {
   return (
