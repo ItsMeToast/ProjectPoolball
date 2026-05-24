@@ -1,0 +1,4 @@
+### Poolball GMs server gitignore ###
+.idea/
+out/
+target/

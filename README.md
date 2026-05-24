@@ -1,4 +1,4 @@
-![Project Poolball](https://github.com/ItsMeToast/ProjectPoolball/blob/main/src/public/projectbanner.png)
+![Project Poolball](https://github.com/ItsMeToast/ProjectPoolball/blob/main/client/src/public/projectbanner.png)
 
 Development of the PoolballGMs Web App
 
