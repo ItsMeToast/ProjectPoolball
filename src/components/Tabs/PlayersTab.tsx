@@ -1,4 +1,9 @@
+const response = await fetch("http://localhost:8080/clients");
+const body = await response.json();
+
 function PlayersTab() {
+  console.log(body)
+
   return (
     <table className="players-table">
       <tr>
