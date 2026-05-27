@@ -1,6 +1,4 @@
 import "./GamesTab.css";
-import React, { useState } from "react";
-import * as $ from "jquery";
 
 
 async function handleSimulate() {
@@ -9,13 +7,17 @@ async function handleSimulate() {
   var results = document.getElementById("results") as HTMLTextAreaElement
   results.innerText=game.homeTeam + " " + game.homeScore + " : "  + game.awayScore + " " + game.awayTeam;
 
+  if (game.overtimeGame) {
+    results.innerText += " (OT)"
+  }
   
   var longresults = document.getElementById("long") as HTMLTextAreaElement
   longresults.innerText = ""
 
   for (let player of game.playerRecords) {
     longresults.innerText += (
-      "\r\n" + player.firstName + " " + player.lastName + ": " 
+      "\r\n"
+      + player.firstName + " " + player.lastName + ": " 
       + player.shots + " shots, "
       + player.goals + " goals, "
       + player.assists + " assists, "

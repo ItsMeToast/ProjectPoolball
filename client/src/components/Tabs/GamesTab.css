@@ -4,3 +4,8 @@
   display: block;
   overflow: auto;
 }
+
+#results {
+  font-size: 28px;
+  font-weight: bold;
+}
