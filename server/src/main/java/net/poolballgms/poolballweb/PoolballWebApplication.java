@@ -6,6 +6,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import playertypes.Playstyle;
+import playertypes.Trait;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -16,11 +18,12 @@ import java.util.List;
 @RestController
 @CrossOrigin
 public class PoolballWebApplication {
-
     private final RecordRepository recordRepository;
+    private final PlayerDataRepository playerDataRepository;
 
-    public PoolballWebApplication(RecordRepository recordRepository) {
+    public PoolballWebApplication(RecordRepository recordRepository, PlayerDataRepository playerDataRepository) {
         this.recordRepository = recordRepository;
+        this.playerDataRepository = playerDataRepository;
     }
 
     @GetMapping("/clients")
@@ -31,6 +34,31 @@ public class PoolballWebApplication {
     @GetMapping("/{id}")
     public PlayerRecordJPA getClient(@PathVariable Long id) {
         return recordRepository.findById(id).orElseThrow(RuntimeException::new);
+    }
+
+    // Test this using Postman by sending any POST request to /players
+    @PostMapping("/players")
+    public ResponseEntity createPlayer() throws URISyntaxException {
+        PlayerData player = new PlayerData();
+        player.setAge(69);
+        player.setFirstName("Liam");
+        player.setLastName("Nefeli");
+        player.setPotential(10);
+        player.setSeason(20);
+        player.setPlaystyle(Playstyle.FINISHER);
+        player.setTrait(Trait.SUPERSTAR);
+
+        PlayerData savedClient = playerDataRepository.save(player);
+        return ResponseEntity.created(new URI("/players/" + savedClient.getId())).body(savedClient);
+    }
+
+    @GetMapping("/players")
+    public List<PlayerData> getPlayers() {
+        PlayerData pd = playerDataRepository.findById(52L).orElseThrow(RuntimeException::new);
+
+        System.out.println(pd.getPlaystyle().equals(Playstyle.FINISHER)); // Shows that ENUM is retrieved correctly
+
+        return playerDataRepository.findAll();
     }
 
     @PostMapping("/clients")
