@@ -1,6 +1,7 @@
 package net.poolballgms.poolballweb;
 
 import jakarta.persistence.*;
+import playertypes.Player;
 import playertypes.Playstyle;
 import playertypes.Trait;
 
@@ -23,6 +24,22 @@ public class PlayerData {
     private Trait trait;
 
     private int potential;
+
+    @Embedded
+    private StatlineJPA stats;
+
+    public PlayerData() {}
+
+    // Update PlayerData using Player
+    public void updateFromPlayer(Player player) {
+        this.firstName = player.getFirstName();
+        this.lastName = player.getLastName();
+        this.age = player.getAge();
+        this.playstyle = player.getStyle();
+        this.trait = player.getTrait();
+        this.potential = player.getPotential();
+        this.stats = new StatlineJPA(player.getStats());
+    }
 
     public Long getId() {
         return id;
@@ -82,5 +99,13 @@ public class PlayerData {
 
     public void setPotential(int potential) {
         this.potential = potential;
+    }
+
+    public StatlineJPA getStats() {
+        return stats;
+    }
+
+    public void setStats(StatlineJPA stats) {
+        this.stats = stats;
     }
 }

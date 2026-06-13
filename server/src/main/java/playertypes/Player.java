@@ -224,6 +224,10 @@ public class Player implements GamePlayer {
         return potential;
     }
 
+    public Statline getStats() {
+        return stats;
+    }
+
     public int getGS() {
         return stats.getGS();
     }

@@ -1,5 +1,8 @@
 package playertypes;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class Statline {
     private final int accuracy;
     private final int blocking;
@@ -28,15 +31,15 @@ public class Statline {
     }
 
     public Statline(int accuracy, int blocking, int endurance, int explosiveness, int intelligence, int power, int size, int speed, double injury) {
-        this.accuracy = Math.max(1, Math.min(accuracy,99));
-        this.blocking = Math.max(1, Math.min(blocking,99));
-        this.endurance = Math.max(1, Math.min(endurance,99));
-        this.explosiveness = Math.max(1, Math.min(explosiveness,99));
-        this.intelligence = Math.max(1, Math.min(intelligence,99));
-        this.power = Math.max(1, Math.min(power,99));
-        this.size = Math.max(1, Math.min(size,99));
-        this.speed = Math.max(1, Math.min(speed,99));
-        this.injury = Math.max(Math.min(Math.round(injury * 10) / 10.0, 10), 0.1);
+        this.accuracy = Math.clamp(accuracy, 1, 99);
+        this.blocking = Math.clamp(blocking, 1, 99);
+        this.endurance = Math.clamp(endurance, 1, 99);
+        this.explosiveness = Math.clamp(explosiveness, 1, 99);
+        this.intelligence = Math.clamp(intelligence, 1, 99);
+        this.power = Math.clamp(power, 1, 99);
+        this.size = Math.clamp(size, 1, 99);
+        this.speed = Math.clamp(speed, 1, 99);
+        this.injury = Math.clamp(Math.round(injury * 10) / 10.0, 0.1, 10);
     }
 
     /**
@@ -109,5 +112,37 @@ public class Statline {
     @Override
     public String toString() {
         return "ACC: " + accuracy + ", BLC: " + blocking + ", END: " + endurance + ", EXP: " + explosiveness + ", INT: " + intelligence + ", POW: " + power + ", SZE: " + size + ", SPD: " + speed + ", Injury: " + injury;
+    }
+
+    public int getAccuracy() {
+        return accuracy;
+    }
+
+    public int getBlocking() {
+        return blocking;
+    }
+
+    public int getEndurance() {
+        return endurance;
+    }
+
+    public int getExplosiveness() {
+        return explosiveness;
+    }
+
+    public int getIntelligence() {
+        return intelligence;
+    }
+
+    public int getPower() {
+        return power;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public int getSpeed() {
+        return speed;
     }
 }

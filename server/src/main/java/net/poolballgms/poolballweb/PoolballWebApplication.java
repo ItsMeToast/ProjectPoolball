@@ -6,6 +6,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import playertypes.Player;
 import playertypes.Playstyle;
 import playertypes.Trait;
 
@@ -40,13 +41,11 @@ public class PoolballWebApplication {
     @PostMapping("/players")
     public ResponseEntity createPlayer() throws URISyntaxException {
         PlayerData player = new PlayerData();
-        player.setAge(69);
-        player.setFirstName("Liam");
-        player.setLastName("Nefeli");
-        player.setPotential(10);
-        player.setSeason(20);
-        player.setPlaystyle(Playstyle.FINISHER);
-        player.setTrait(Trait.SUPERSTAR);
+
+        Player newPlayer = new Player(Trait.SUPERSTAR);
+
+        player.updateFromPlayer(newPlayer);
+        player.setSeason(10);
 
         PlayerData savedClient = playerDataRepository.save(player);
         return ResponseEntity.created(new URI("/players/" + savedClient.getId())).body(savedClient);
@@ -54,9 +53,11 @@ public class PoolballWebApplication {
 
     @GetMapping("/players")
     public List<PlayerData> getPlayers() {
-        PlayerData pd = playerDataRepository.findById(52L).orElseThrow(RuntimeException::new);
+        PlayerData pd = playerDataRepository.findById(1L).orElseThrow(RuntimeException::new);
 
         System.out.println(pd.getPlaystyle().equals(Playstyle.FINISHER)); // Shows that ENUM is retrieved correctly
+
+        System.out.println(pd.getStats());
 
         return playerDataRepository.findAll();
     }
@@ -95,8 +96,7 @@ public class PoolballWebApplication {
 
     @GetMapping("/simulate")
     public GameRecord simulate(@RequestParam(name = "ageNum", defaultValue = "3") int ageNum) {
-        GameRecord rec = GameTester.testAgedGame(ageNum);
-        return rec;
+        return GameTester.testAgedGame(ageNum);
     }
 }
 
