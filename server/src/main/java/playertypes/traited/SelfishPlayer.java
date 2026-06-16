@@ -13,8 +13,8 @@ public class SelfishPlayer extends Player{
         if (!trait.equals(Trait.SELFISH)) {throw new IllegalArgumentException("SelfishPlayer must have trait SELFISH");}
     }
 
-    public SelfishPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public SelfishPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SELFISH)) {throw new IllegalArgumentException("SelfishPlayer must have trait SELFISH");}
     }
 

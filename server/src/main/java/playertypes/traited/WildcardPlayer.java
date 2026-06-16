@@ -15,8 +15,8 @@ public class WildcardPlayer extends Player{
         if (!trait.equals(Trait.WILDCARD)) {throw new IllegalArgumentException("WildcardPlayer must have trait WILDCARD");}
     }
 
-    public WildcardPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public WildcardPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.WILDCARD)) {throw new IllegalArgumentException("WildcardPlayer must have trait WILDCARD");}
     }
 

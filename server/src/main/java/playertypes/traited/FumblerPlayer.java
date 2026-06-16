@@ -1,9 +1,6 @@
 package playertypes.traited;
 
-import playertypes.Player;
-import playertypes.Playstyle;
-import playertypes.Statline;
-import playertypes.Trait;
+import playertypes.*;
 
 public class FumblerPlayer extends Player{
     public FumblerPlayer(Trait trait) {
@@ -16,8 +13,8 @@ public class FumblerPlayer extends Player{
         if (!trait.equals(Trait.FUMBLER)) {throw new IllegalArgumentException("FumblerPlayer must have trait FUMBLER");}
     }
 
-    public FumblerPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public FumblerPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.FUMBLER)) {throw new IllegalArgumentException("FumblerPlayer must have trait FUMBLER");}
     }
 }

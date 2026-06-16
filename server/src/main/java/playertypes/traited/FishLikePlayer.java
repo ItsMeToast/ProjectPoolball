@@ -13,8 +13,8 @@ public class FishLikePlayer extends Player{
         if (!trait.equals(Trait.FISH_LIKE)) {throw new IllegalArgumentException("FishLikePlayer must have trait FISH_LIKE");}
     }
 
-    public FishLikePlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public FishLikePlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.FISH_LIKE)) {throw new IllegalArgumentException("FishLikePlayer must have trait FISH_LIKE");}
     }
 

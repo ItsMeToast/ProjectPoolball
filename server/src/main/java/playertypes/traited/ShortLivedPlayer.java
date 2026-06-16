@@ -13,8 +13,8 @@ public class ShortLivedPlayer extends Player{
         if (!trait.equals(Trait.SHORT_LIVED)) {throw new IllegalArgumentException("ShortLivedPlayer must have trait SHORT_LIVED");}
     }
 
-    public ShortLivedPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public ShortLivedPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SHORT_LIVED)) {throw new IllegalArgumentException("ShortLivedPlayer must have trait SHORT_LIVED");}
     }
 

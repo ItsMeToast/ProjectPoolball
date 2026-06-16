@@ -13,8 +13,8 @@ public class AgilePlayer extends Player{
         if (!trait.equals(Trait.AGILE)) {throw new IllegalArgumentException("AgilePlayer must have trait AGILE");}
     }
 
-    public AgilePlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public AgilePlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.AGILE)) {throw new IllegalArgumentException("AgilePlayer must have trait AGILE");}
     }
 

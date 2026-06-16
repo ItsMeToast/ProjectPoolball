@@ -13,8 +13,8 @@ public class GiantPlayer extends Player{
         if (!trait.equals(Trait.GIANT)) {throw new IllegalArgumentException("GiantPlayer must have trait GIANT");}
     }
 
-    public GiantPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public GiantPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.GIANT)) {throw new IllegalArgumentException("GiantPlayer must have trait GIANT");}
     }
 

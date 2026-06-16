@@ -45,6 +45,21 @@ public class StatlineJPA {
         this.injury = statline.getInjury();
     }
 
+    // Build Statline from this StatlineJPA
+    public Statline makeStatline() {
+        return new Statline(
+                this.accuracy,
+                this.blocking,
+                this.endurance,
+                this.explosiveness,
+                this.intelligence,
+                this.power,
+                this.size,
+                this.speed,
+                this.injury
+        );
+    }
+
     @Override
     public String toString() {
         return "ACC: " + accuracy + ", BLC: " + blocking + ", END: " + endurance + ", EXP: " + explosiveness + ", INT: " + intelligence + ", POW: " + power + ", SZE: " + size + ", SPD: " + speed + ", Injury: " + injury;

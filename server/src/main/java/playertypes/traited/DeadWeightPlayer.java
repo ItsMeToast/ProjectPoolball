@@ -13,8 +13,8 @@ public class DeadWeightPlayer extends Player{
         if (!trait.equals(Trait.DEAD_WEIGHT)) {throw new IllegalArgumentException("DeadWeightPlayer must have trait DEAD_WEIGHT");}
     }
 
-    public DeadWeightPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public DeadWeightPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.DEAD_WEIGHT)) {throw new IllegalArgumentException("DeadWeightPlayer must have trait DEAD_WEIGHT");}
     }
 

@@ -13,8 +13,8 @@ public class GenerousPlayer extends Player{
         if (!trait.equals(Trait.GENEROUS)) {throw new IllegalArgumentException("GenerousPlayer must have trait GENEROUS");}
     }
 
-    public GenerousPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public GenerousPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.GENEROUS)) {throw new IllegalArgumentException("GenerousPlayer must have trait GENEROUS");}
     }
 }

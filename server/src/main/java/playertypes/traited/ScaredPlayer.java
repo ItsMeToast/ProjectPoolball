@@ -13,8 +13,8 @@ public class ScaredPlayer extends Player{
         if (!trait.equals(Trait.SCARED)) {throw new IllegalArgumentException("ScaredPlayer must have trait SCARED");}
     }
 
-    public ScaredPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public ScaredPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SCARED)) {throw new IllegalArgumentException("ScaredPlayer must have trait SCARED");}
     }
 

@@ -13,8 +13,8 @@ public class SuperstarPlayer extends Player{
         if (!trait.equals(Trait.SUPERSTAR)) {throw new IllegalArgumentException("SuperstarPlayer must have trait SUPERSTAR");}
     }
 
-    public SuperstarPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public SuperstarPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SUPERSTAR)) {throw new IllegalArgumentException("SuperstarPlayer must have trait SUPERSTAR");}
     }
 

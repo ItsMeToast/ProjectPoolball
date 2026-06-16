@@ -10,7 +10,7 @@ public class PlayerTest {
     Player player;
     @BeforeEach
     public void setupPlayerTests() {
-        player = new Player("Liam", "Nefeli", 27, Playstyle.ATTACKER, Trait.CLUTCH, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
+        player = new Player("Liam", "Nefeli", Nationality.CAN, 27, Playstyle.ATTACKER, Trait.CLUTCH, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
     }
 
     @Test
@@ -51,7 +51,7 @@ public class PlayerTest {
     @Test
     public void testParameterizedInvalidTraitStyle() {
         try {
-            Player p1 = new Player("Liam", "Nefeli", 27, Playstyle.ATTACKER, Trait.SNEAKY, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
+            Player p1 = new Player("Liam", "Nefeli", Nationality.CAN, 27, Playstyle.ATTACKER, Trait.SNEAKY, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
             fail();
         } catch (IllegalArgumentException ignored) {}
     }
@@ -59,7 +59,7 @@ public class PlayerTest {
     @Test
     public void testParameterizedInvalidTraitPotential() {
         try {
-            Player p1 = new Player("Liam", "Nefeli", 27, Playstyle.ATTACKER, Trait.GOON, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
+            Player p1 = new Player("Liam", "Nefeli", Nationality.CAN, 27, Playstyle.ATTACKER, Trait.GOON, new Statline(99,96,93,90,87,84,81,78,2.5), 10);
             fail();
         } catch (IllegalArgumentException ignored) {}
     }

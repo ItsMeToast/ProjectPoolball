@@ -9,8 +9,14 @@ function PlayersTab() {
   // console.log(body)
 
   return (
-    <table className="players-table" align="center">
+    <table className="players-table table w-25 text-center table-bordered p1 table-striped table-hover" align="center">
       <tbody>
+        <tr>
+          <td>PLAYER ID</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Injury</td>
+        </tr>
         {body.map((player: Player) => (
           <tr key={player.id}>
             <td>{player.id} </td>

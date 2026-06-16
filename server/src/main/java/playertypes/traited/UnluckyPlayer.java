@@ -1,9 +1,6 @@
 package playertypes.traited;
 
-import playertypes.Player;
-import playertypes.Playstyle;
-import playertypes.Statline;
-import playertypes.Trait;
+import playertypes.*;
 
 public class UnluckyPlayer extends Player{
     public UnluckyPlayer(Trait trait) {
@@ -16,8 +13,8 @@ public class UnluckyPlayer extends Player{
         if (!trait.equals(Trait.UNLUCKY)) {throw new IllegalArgumentException("UnluckyPlayer must have trait UNLUCKY");}
     }
 
-    public UnluckyPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public UnluckyPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.UNLUCKY)) {throw new IllegalArgumentException("UnluckyPlayer must have trait UNLUCKY");}
     }
 

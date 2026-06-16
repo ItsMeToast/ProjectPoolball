@@ -13,8 +13,8 @@ public class SniperPlayer extends Player{
         if (!trait.equals(Trait.SNIPER)) {throw new IllegalArgumentException("SniperPlayer must have trait SNIPER");}
     }
 
-    public SniperPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public SniperPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SNIPER)) {throw new IllegalArgumentException("SniperPlayer must have trait SNIPER");}
     }
 

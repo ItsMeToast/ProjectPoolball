@@ -2,5 +2,8 @@ package net.poolballgms.poolballweb;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PlayerDataRepository extends JpaRepository<PlayerData, Long> {
+import java.util.List;
+
+public interface PlayerDataRepository extends JpaRepository<PlayerData, PlayerDataID> {
+    List<PlayerData> findBySeason(int season);
 }

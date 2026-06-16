@@ -62,6 +62,7 @@ public class Player implements GamePlayer {
 
     private final String firstName;
     private final String lastName;
+    private final Nationality nationality;
     private int age;
     private final Playstyle style;
     private final Trait trait;
@@ -95,10 +96,10 @@ public class Player implements GamePlayer {
     /**
      * Constructs randomized Traited Player using traited constructor
      */
-    public static Player getNewPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+    public static Player getNewPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
         try {
-            Constructor<? extends Player> cons = traitClasses.get(trait).getDeclaredConstructor(String.class, String.class, int.class, Playstyle.class, Trait.class, Statline.class, int.class);
-            return cons.newInstance(firstName, lastName, age, style, trait, stats, potential);
+            Constructor<? extends Player> cons = traitClasses.get(trait).getDeclaredConstructor(String.class, String.class, Nationality.class, int.class, Playstyle.class, Trait.class, Statline.class, int.class);
+            return cons.newInstance(firstName, lastName, nationality, age, style, trait, stats, potential);
         } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
             throw new RuntimeException(e);
         }
@@ -110,6 +111,7 @@ public class Player implements GamePlayer {
     public Player() {
         this.firstName = NameGenerator.getFirstName();
         this.lastName = NameGenerator.getLastName();
+        this.nationality = Nationality.random();
         this.age = 18;
         this.potential = rand.nextInt(10)+1;
         this.style = Playstyle.values()[rand.nextInt(Playstyle.values().length)];
@@ -131,6 +133,7 @@ public class Player implements GamePlayer {
     public Player(Trait trait) {
         this.firstName = NameGenerator.getFirstName();
         this.lastName = NameGenerator.getLastName();
+        this.nationality = Nationality.random();
         this.age = 18;
         this.trait = trait;
 
@@ -163,6 +166,7 @@ public class Player implements GamePlayer {
 
         this.firstName = NameGenerator.getFirstName();
         this.lastName = NameGenerator.getLastName();
+        this.nationality = Nationality.random();
 
         // Weird bug, check if names are null
         if (Objects.equals(this.firstName, "null") || Objects.equals(this.lastName, "null")) {
@@ -178,19 +182,21 @@ public class Player implements GamePlayer {
      * Constructs a Player object using full parameterization
      * @param firstName the first name of the player
      * @param lastName the last name of the player
+     * @param nationality the nationality of the player
      * @param age player age (20-30 for major leagues)
      * @param style player playstyle, dictates growth
      * @param trait player trait (must be valid given
      * @param stats statline object containing the player stats
      * @param potential the potential (measure of expected growth) of the player
      */
-    public Player(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+    public Player(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
         if (!trait.isValidStyle(style) || !trait.isValidPotential(potential)) {
             throw new IllegalArgumentException("Illegal Trait passed for Player (" + trait + ", " + style + ", " + potential + " star)");
         }
 
         this.firstName = firstName;
         this.lastName = lastName;
+        this.nationality = nationality;
         this.age = age;
         this.style = style;
         this.trait = trait;
@@ -206,6 +212,10 @@ public class Player implements GamePlayer {
     @Override
     public String getLastName() {
         return lastName;
+    }
+
+    public Nationality getNationality() {
+        return nationality;
     }
 
     public int getAge() {

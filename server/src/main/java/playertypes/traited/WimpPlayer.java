@@ -13,8 +13,8 @@ public class WimpPlayer extends Player{
         if (!trait.equals(Trait.WIMP)) {throw new IllegalArgumentException("WimpPlayer must have trait WIMP");}
     }
 
-    public WimpPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public WimpPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.WIMP)) {throw new IllegalArgumentException("WimpPlayer must have trait WIMP");}
     }
 

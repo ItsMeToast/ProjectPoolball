@@ -13,8 +13,8 @@ public class PassFirstPlayer extends Player{
         if (!trait.equals(Trait.PASS_FIRST)) {throw new IllegalArgumentException("PassFirstPlayer must have trait PASS_FIRST");}
     }
 
-    public PassFirstPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public PassFirstPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.PASS_FIRST)) {throw new IllegalArgumentException("PassFirstPlayer must have trait PASS_FIRST");}
     }
 

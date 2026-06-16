@@ -1,20 +1,27 @@
 package net.poolballgms.poolballweb;
 
 import jakarta.persistence.*;
+import playertypes.Nationality;
 import playertypes.Player;
 import playertypes.Playstyle;
 import playertypes.Trait;
 
 @Entity
 @Table(name="PLAYER_DATA")
+@IdClass(PlayerDataID.class)
 public class PlayerData {
     @Id
-    @GeneratedValue
-    private Long id;
+    private long playerID;
+
+    @Id
+    private int season;
 
     private String firstName;
     private String lastName;
-    private int season;
+
+    @Enumerated(EnumType.STRING)
+    private Nationality nationality;
+
     private int age;
 
     @Enumerated(EnumType.STRING)
@@ -30,10 +37,14 @@ public class PlayerData {
 
     public PlayerData() {}
 
-    // Update PlayerData using Player
-    public void updateFromPlayer(Player player) {
+    // Build PlayerData from a Player
+    public PlayerData(Player player, long playerID, int season) {
+        this.playerID = playerID;
+        this.season = season;
+
         this.firstName = player.getFirstName();
         this.lastName = player.getLastName();
+        this.nationality = player.getNationality();
         this.age = player.getAge();
         this.playstyle = player.getStyle();
         this.trait = player.getTrait();
@@ -41,8 +52,26 @@ public class PlayerData {
         this.stats = new StatlineJPA(player.getStats());
     }
 
-    public Long getId() {
-        return id;
+    // Build Player from this PlayerData
+    public Player makePlayer() {
+        return Player.getNewPlayer(
+                this.firstName,
+                this.lastName,
+                this.nationality,
+                this.age,
+                this.playstyle,
+                this.trait,
+                this.stats.makeStatline(),
+                this.potential
+        );
+    }
+
+    public long getPlayerID() {
+        return playerID;
+    }
+
+    public void setPlayerID(long playerID) {
+        this.playerID = playerID;
     }
 
     public String getFirstName() {
@@ -59,6 +88,14 @@ public class PlayerData {
 
     public void setLastName(String lastName) {
         this.lastName = lastName;
+    }
+
+    public Nationality getNationality() {
+        return nationality;
+    }
+
+    public void setNationality(Nationality nationality) {
+        this.nationality = nationality;
     }
 
     public int getSeason() {

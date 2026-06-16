@@ -1,9 +1,6 @@
 package playertypes.traited;
 
-import playertypes.Player;
-import playertypes.Playstyle;
-import playertypes.Statline;
-import playertypes.Trait;
+import playertypes.*;
 
 public class SneakyPlayer extends Player{
     public SneakyPlayer(Trait trait) {
@@ -16,8 +13,8 @@ public class SneakyPlayer extends Player{
         if (!trait.equals(Trait.SNEAKY)) {throw new IllegalArgumentException("SneakyPlayer must have trait SNEAKY");}
     }
 
-    public SneakyPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public SneakyPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.SNEAKY)) {throw new IllegalArgumentException("SneakyPlayer must have trait SNEAKY");}
     }
 

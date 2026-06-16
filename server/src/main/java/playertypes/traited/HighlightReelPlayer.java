@@ -3,10 +3,7 @@ package playertypes.traited;
 import gamesimulator.MovablePlayer;
 import gamesimulator.Pool;
 import gamesimulator.actions.*;
-import playertypes.Player;
-import playertypes.Playstyle;
-import playertypes.Statline;
-import playertypes.Trait;
+import playertypes.*;
 
 import java.util.Random;
 
@@ -23,8 +20,8 @@ public class HighlightReelPlayer extends Player{
         if (!trait.equals(Trait.HIGHLIGHT_REEL)) {throw new IllegalArgumentException("HighlightReelPlayer must have trait HIGHLIGHT_REEL");}
     }
 
-    public HighlightReelPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public HighlightReelPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.HIGHLIGHT_REEL)) {throw new IllegalArgumentException("HighlightReelPlayer must have trait HIGHLIGHT_REEL");}
     }
 

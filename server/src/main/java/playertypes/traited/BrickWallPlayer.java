@@ -13,8 +13,8 @@ public class BrickWallPlayer extends Player{
         if (!trait.equals(Trait.BRICK_WALL)) {throw new IllegalArgumentException("BrickWallPlayer must have trait BRICK_WALL");}
     }
 
-    public BrickWallPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public BrickWallPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.BRICK_WALL)) {throw new IllegalArgumentException("BrickWallPlayer must have trait BRICK_WALL");}
     }
 

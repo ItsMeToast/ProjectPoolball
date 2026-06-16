@@ -1,9 +1,6 @@
 package playertypes.traited;
 
-import playertypes.Player;
-import playertypes.Playstyle;
-import playertypes.Statline;
-import playertypes.Trait;
+import playertypes.*;
 
 public class EliteShotPlayer extends Player{
     public EliteShotPlayer(Trait trait) {
@@ -16,8 +13,8 @@ public class EliteShotPlayer extends Player{
         if (!trait.equals(Trait.ELITE_SHOT)) {throw new IllegalArgumentException("EliteShotPlayer must have trait ELITE_SHOT");}
     }
 
-    public EliteShotPlayer(String firstName, String lastName, int age, Playstyle style, Trait trait, Statline stats, int potential) {
-        super(firstName, lastName, age, style, trait, stats, potential);
+    public EliteShotPlayer(String firstName, String lastName, Nationality nationality, int age, Playstyle style, Trait trait, Statline stats, int potential) {
+        super(firstName, lastName, nationality, age, style, trait, stats, potential);
         if (!trait.equals(Trait.ELITE_SHOT)) {throw new IllegalArgumentException("EliteShotPlayer must have trait ELITE_SHOT");}
     }
 
